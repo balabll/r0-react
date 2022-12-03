@@ -13,7 +13,6 @@ importers:
       eslint: ^8.28.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.2.1
-      eslint-plugin,: link:@typescript-eslint/eslint-plugin,
       husky: ^8.0.2
       prettier: ^2.8.0
       rollup: ^3.4.0
@@ -30,13 +29,21 @@ importers:
       eslint: registry.npmmirror.com/eslint/8.28.0
       eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.5.0_eslint@8.28.0
       eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_cwlo2dingkvfydnaculr42urve
-      eslint-plugin,: link:@typescript-eslint/eslint-plugin,
       husky: registry.npmmirror.com/husky/8.0.2
       prettier: registry.npmmirror.com/prettier/2.8.0
       rollup: registry.npmmirror.com/rollup/3.4.0
       rollup-plugin-generate-package-json: registry.npmmirror.com/rollup-plugin-generate-package-json/3.2.0_rollup@3.4.0
       rollup-plugin-typescript2: registry.npmmirror.com/rollup-plugin-typescript2/0.34.1_iyyukaj3pdiwftuon3ena43c4i
       typescript: registry.npmmirror.com/typescript/4.9.3
+
+  packages/react:
+    specifiers:
+      shared: workspace:*
+    dependencies:
+      shared: link:../shared
+
+  packages/shared:
+    specifiers: {}
 
 packages:
 
